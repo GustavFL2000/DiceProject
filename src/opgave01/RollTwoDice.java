@@ -12,7 +12,6 @@ public class RollTwoDice {
 
     public static void main(String[] args) {
         System.out.println("Velkommen til spillet, rul to terninger.");
-        printRules();
         System.out.println();
 
         playTwoDie();
@@ -20,12 +19,6 @@ public class RollTwoDice {
         System.out.println("Tak for at spille, rul to terninger.");
     }
 
-    private static void printRules() {
-        System.out.println("=====================================================");
-        System.out.println("Regler for rul en terning");
-        System.out.println("Spilleren ruller en terning, så længde man lyster.");
-        System.out.println("=====================================================");
-    }
 
     private static void playTwoDie() {
         Scanner scanner = new Scanner(System.in);
@@ -60,14 +53,15 @@ public class RollTwoDice {
             doublesCount++;
         }
 
-        for(int i = 0; i < dice.length; i++) {
-            count[dice[i] - 1]++;
-        }
+        for (int i = 0; i < dice.length; i++) { // kører igennem terningerne (2x)
+            count[dice[i] - 1]++; // opdaterer antallet af hver terninge værdi
+        } // når terningen viser 1, opdateres count[0], når den viser 6, opdateres count[5]
     }
 
+    // Print antallet af hver terninge værdi
     public static void printCountArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println("Antal " + (i + 1) + " er: " + array[i]);
+        for (int i = 0; i < array.length; i++) { // kører igennem arrayet
+            System.out.println("Antal " + (i + 1) + " er: " + array[i]); // printer antallet af hver terninge værdi
         }
     }
 
