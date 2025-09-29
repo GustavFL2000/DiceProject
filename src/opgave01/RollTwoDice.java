@@ -77,8 +77,13 @@ public class RollTwoDice {
     }
 
     public static int[] rollDice() {
-        int die1 = rollDie();
+        /*int die1 = rollDie();
         int die2 = rollDie();
-        return new int[]{die1, die2};
+        return new int[]{die1, die2};*/
+        int[] die = new int[2];
+        for (int i = 0; i < die.length; i++) {
+            die[i] = rollDie();
+        }
+        return die;
     }
 }
