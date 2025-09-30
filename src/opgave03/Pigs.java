@@ -47,8 +47,7 @@ public class Pigs {
                 }
                 if (playerScore[currentPlayer] + roundScore >= 100) {
                     playerScore[currentPlayer] += roundScore; // Tilføj runde-point til totalscoren
-                    System.out.println("\nSpiller " + (currentPlayer + 1) + " har vundet med "
-                            + playerScore[currentPlayer] + " point!");
+                    System.out.println("\nSpiller " + (currentPlayer + 1) + " har vundet med " + playerScore[currentPlayer] + " point!");
                     scanner.close();
                     return; // Afslut spillet
                 }
